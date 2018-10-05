@@ -1,15 +1,11 @@
 class Proctor < Formula
   desc "Proctor CLI"
   homepage "https://github.com/gojektech/proctor"
-  url "https://github.com/gojektech/proctor/archive/v0.1.0.tar.gz"
+  url "https://github.com/gojektech/proctor/releases/download/v0.1.0/proctor_0.1.0_Darwin_x86_64.tar.gz"
   head "https://github.com/gojektech/proctor.git"
 
-  depends_on "go" => :build
-
   def install
-    system "make", "setup"
-    system "make", "install"
-    system "make", "install"
+    bin.install "proctor"
   end
 
   test do
